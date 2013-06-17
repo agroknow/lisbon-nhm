@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MUHNAC</title>
+<!--<base href="http://www.mnhnc.ul.pt/pls/portal/">-->
+
+<link rel="contents" href="/pls/portal">
+
+<link rel="stylesheet" type="text/css" media="all" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/calendar.css">
+<link rel="stylesheet" type="text/css" media="all" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/style.css" title="A">
+<link rel="alternate stylesheet" type="text/css" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/style_medium.css" title="A+">
+<link rel="alternate stylesheet" type="text/css" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/style_large.css" title="A++">
+
+    <!--more css(AK)-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style/ak-style.css" />
+
+
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/styleswitcher.js" ></script>  
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/aqtree3clickable.js"></script>
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/p7tmscripts.js"></script>
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/p7tmscriptsright.js"></script>
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/calendar.js"></script>
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/js/calendar-setup.js"></script>
+<script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/js/default.js"></script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    
+    
+
+
+
+<script type="text/javascript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		cidade_universitaria_imagemap_01_cantina_1_over = newImage("/images/netpa/ul/img/cidade_universitaria_02.gif");
+		cidade_universitaria_imagemap_01_faculdade_ciencias_over = newImage("/images/netpa/ul/img/cidade_universitaria_03.gif");
+		cidade_universitaria_imagemap_01_faculdade_letras_over = newImage("/images/netpa/ul/img/cidade_universitaria_04.gif");
+		cidade_universitaria_imagemap_01_reitoria_over = newImage("/images/netpa/ul/img/cidade_universitaria_05.gif");
+		cidade_universitaria_imagemap_01_faculdade_psicologia_over = newImage("/images/netpa/ul/img/cidade_universitaria_06.gif");
+		cidade_universitaria_imagemap_01_faculdade_direito_over = newImage("/images/netpa/ul/img/cidade_universitaria_07.gif");
+		cidade_universitaria_imagemap_01_faculdade_dentaria_over = newImage("/images/netpa/ul/img/cidade_universitaria_08.gif");
+		cidade_universitaria_imagemap_01_instituto_ciencias_over = newImage("/images/netpa/ul/img/cidade_universitaria_09.gif");
+		cidade_universitaria_imagemap_01_cantina_2_over = newImage("/images/netpa/ul/img/cidade_universitaria_10.gif");
+	       cidade_universitaria_imagemap_01_complexo_interdisciplinar_over = newImage("/images/netpa/ul/img/cidade_universitaria_11.gif");
+		cidade_universitaria_imagemap_01_faculdade_farmacia_over = newImage("/images/netpa/ul/img/cidade_universitaria_12.gif");
+		cidade_universitaria_imagemap_01_faculdade_medicina_over = newImage("/images/netpa/ul/img/cidade_universitaria_13.gif");
+		preloadFlag = true;
+	}
+}
+function goBack() { 
+	if(history.length > 0){		
+		history.back();	
+	}
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+
+function MM_setTextOfLayer(objName,x,newText) { //v4.01
+  if ((obj=MM_findObj(objName))!=null) with (obj)
+    if (document.layers) {document.write(unescape(newText)); document.close();}
+    else innerHTML = unescape(newText);
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function goBack() {
+  if(history.length > 0){
+     history.back();
+   }
+}
+
+function gotoURL(dest) {
+  location.href = dest;
+}
+
+function gotoAnchor(anchorName) {
+  var old = location.href;
+  location.href = location.href+anchorName;
+  location.href = old;
+}
+function jspw3(d,m,f){ //v1.4 
+	f=f.split(',');var b=f[15],u=f[17],c=f[0],sl="_v_w_d_";var hr="http://www.mnhnc.ul.pt/images/netpa/ul/jspw3_pop.htm?"+eval('escape(m.replace(/\\//g,sl))');var ret=massage(f[10],f[11],f[12],f[13],f[14],f[1],String(f[2]),b,f[6]);if(ret!=''){hr+=","+ret[0]+","+c+","+escape(f[1])+","+f[2]+","+escape(f[3])+","+escape(f[4])+","+f[6]+","+f[7]+","+f[8]+","+f[9]+","+ret[4]+","+ret[5]+","+f[16]+","+f[19]+","+eval('d.replace(/\\//g,sl)')+","+escape(f[5]);b=(b)?"yes":"no";var features="resizable=yes,scrollbars="+b+",width="+ret[0]+",height="+ret[1]+",top="+ret[2]+",left="+ret[3];if(u&&!c){window.open(hr,gJspw3nm++,features);}else{if(gJspw3Obj && typeof gJspw3Obj=='object' && !gJspw3Obj.closed)gJspw3Obj.close();gJspw3Obj=window.open(hr,gJspw3nm++,features);}}else window.open(m);document.MM_returnValue=(f[18]==3);
+}
+//-->
+</script>
+<script type="text/javascript" language="JavaScript" src="http://www.mnhnc.ul.pt/images/netpa/ul/vwd_scripts/jspw3x.js"></script>
+</head>
+<body onload="preloadImages();MM_preloadImages('img/belas_artes/belas_artes_on.gif','img/escola/escola_on.gif');P7_TMopen()" >
+
+  <a name="topopagina" id="topopagina"></a>
+  <div class="invisivel"><a href="#destaque" class="invisivel">destaque</a></div>
+  <div id="wrap">
+    <div id="content">
+      
+<SCRIPT TYPE="text/javascript">
+<!-- Comment out script for old browsers
+function propertysheet(thingid,masterthingid,cornerid,siteid,settingssetid,settingssiteid) { popupWin = window.open("http://www.mnhnc.ul.pt/pls/portal/PORTAL.wwv_thinghtml.showpropertysheet?p_thingid="+thingid+"&p_masterthingid="+masterthingid+"&p_cornerid="+cornerid+"&p_siteid="+siteid+"&p_settingssetid="+settingssetid+"&p_settingssiteid="+settingssiteid,"Property_Sheet","statusbar=Y,resizable,scrollbars,width=450,height=450"); popupWin.focus(); } //-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+<!-- Comment out script for old browsers
+function folderpropertysheet(cornerid,siteid,settingssetid,settingssiteid) { popupWin = window.open("http://www.mnhnc.ul.pt/pls/portal/PORTAL.wwpob_page.propertysheet?p_cornerid="+cornerid+"&p_siteid="+siteid+"&p_settingssetid="+settingssetid+"&p_settingssiteid="+settingssiteid,"Property_Sheet","statusbar=Y,resizable,scrollbars,width=450,height=450"); popupWin.focus(); } //-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript">
+function show_task_help() {
+   newWindow = window.open("http://www.mnhnc.ul.pt/portalHelp/ohw/?locale=en", "Help", "menubar=1,toolbar=1,scrollbars=1,resizable=1,width=700,height=500");
+}
+</SCRIPT>
+<TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><TABLE  BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0" class="RegionNoBorder">
+<TR>
+<TD class="RegionHeaderColor" WIDTH="100%"><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><noscript>
+<p>Esta p&aacute;gina n&atilde;o funciona correctamente com javascript desligado.</p>
+</noscript>
+<noscript>
+<p>Esta p&aacute;gina n&atilde;o funciona correctamente com javascript desligado.</p>
+</noscript>
+<noscript>
+<p>Esta p&aacute;gina n&atilde;o funciona correctamente com javascript desligado.</p>
+</noscript>
+<div id="header">
+  <h1><span><a href="/pls/portal/url/page/portal_univ_lisboa"></a></span></h1>
+  <div id="topbar">
+    <ul>
+      <li><a href="url/page/MUSEUS/menu_superior/Localizacao" tabindex="1" title="location">location</a></li>
+      <li><a href="url/page/MUSEUS/menu_superior/contactos" tabindex="2" title="contacts">contacts</a></li>
+      <li><a href="url/page/MUSEUS/menu_superior/mapa_site" tabindex="3" title="portal map">portal map</a></li>
+      <li><a href="url/page/MUSEUS/menu_superior/ajuda" tabindex="4" title="help">help</a></li>
+    </ul>
+  </div>
+  <div id="login">
+    <h2>LOGIN</h2>
+<script type="text/javascript">
+    function chkKey(event){
+      switch(event.keyCode){
+        case 13:document.formLogin.submit();
+        break;
+      }
+    }
+</script>
+<noscript>
+<p>Sem Javascript n&atilde;o &eacute; possivel efectuar submits por teclado.</p>
+</noscript>
+    <form id="form2" name="formLogin" method="post" action="http://oraportal01.ul.pt:7777/sso/auth" autocomplete="off">
+      <input type="hidden" name="v" value="v1.4"/>
+      <input type="hidden" name="site2pstoretoken" value="v1.2~CB60C36E~A9376B2E747B7DBE8A07100B7766F82AC0B505EE74AECCF5601134A914FF082CF2BF1D31F933C4A2A87A70D28F37A2B568FBF480FE6A23395BD8DF7E9E7E6C57C03B4E54B543BC8356817F462312D5CD908A675523326A66199D07D4B66DCE9D09F7720B3925211C4FBAEF0E9D861BC271FD0BDE8FBFBE69A0316BAE25488DE9ED28233E18326FF5C30EF15D003DED0301BE6EC3F78EA5C305082A6FBA2E14763FA4B2F6A21D412C4F29FC00E5D45768B756BAE26581FB7FEC5FC12365BE45DE9CF1A62B84278ABBA0543034EBEA9EC5561DD259C8910A3708D779E48559F7C3699C890CCB7188BB24AB184B9CEB1C45"/>
+      <label for="ssousername"><input name="ssousername" type="text" id="ssousername" value="utilizador" class="text" accesskey="a" onkeydown="javascript:chkKey(event);" onFocus="userEffect(this);" onBlur="userEffect(this, 0);" />user</label>
+      <label for="password"><input name="password" type="password" id="password" value="senha" class="text" onkeydown="javascript:chkKey(event);"  onFocus="passwordEffect(this);" onBlur="passwordEffect(this, 0);" />password</label>
+    </form>
+    <p><span onclick="javascript:document.formLogin.submit();">login</span> | <a href="url/page/portal_univ_lisboa/info" title="info">info</a></p>
+  </div>
+  <div id="acessibilidade">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top"><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/spacer.gif" alt="" title="" width="5" height="10" /></td>
+        <td><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/font_normal_f2.gif" alt="Normal" title="Normal" name="normal" width="17" height="20" id="normal" onclick="MM_nbGroup('down','group1','normal','/images/netpa/ul/img/font_normal_f2.gif',1);javascript:fontsizesmall();" onfocus="MM_nbGroup('over','normal','/images/netpa/ul/img/font_normal_f2.gif','',1)" onblur="MM_nbGroup('out')" onload="MM_nbGroup('init','group1','normal','/images/netpa/ul/img/font_normal.gif',1)" /></td>
+        <td><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/font_medium.gif" alt="Medium" title="Medium" name="medio" width="19" height="20" id="medio" onclick="MM_nbGroup('down','group1','medio','/images/netpa/ul/img/font_medium_f2.gif',1);javascript:fontsizemedium();" onfocus="MM_nbGroup('over','medio','/images/netpa/ul/img/font_medium_f2.gif','',1)" onblur="MM_nbGroup('out')" onload="" /></td>
+        <td><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/font_large.gif" alt="Large" title="Large" name="grande" width="17" height="20" id="grande" onclick="MM_nbGroup('down','group1','grande','/images/netpa/ul/img/font_large_f2.gif',1);javascript:fontsizelarge();" onfocus="MM_nbGroup('over','grande','/images/netpa/ul/img/font_large_f2.gif','',1)" onblur="MM_nbGroup('out')" onload="" /></td>
+        <td valign="top"><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/spacer.gif" alt="" title="" width="10" height="10" /></td>
+        <td valign="top">
+         <a href="http://oraportal01.ul.pt:7777/pls/orasso/orasso.wwctx_app_language.set_language?p_http_language=pt-pt&p_nls_language=pt&p_nls_territory=PORTUGAL&p_requested_url=http%3A%2F%2Fwww.mnhnc.ul.pt%2Fpls%2Fportal%2FPORTAL.wwctx_app_language.set_language%3Fp_http_language%3Dpt-pt%26p_nls_language%3Dpt%26p_nls_territory%3DPORTUGAL%26p_requested_url%3Dhttp%253A%252F%252Fwww.mnhnc.ul.pt%252Fportal%252Fpage%253F_pageid%253D418%252C1%2526_dad%253Dportal%2526_schema%253DPORTAL" onblur="MM_swapImgRestore()" onfocus="MM_swapImage('lingua','','/images/netpa/ul/img/portugues_f2.gif',1)" title="Alterar idioma para Inglês" tabindex="9"><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/portugues.gif" alt="Alterar idioma para Inglês" title="Alterar idioma para Inglês" name="lingua" width="69" height="20" border="0" id="lingua"/></a>
+</td>
+        <td valign="top"><img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/spacer.gif" alt="" title="" width="10" height="10" /></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="rows">
+  <div id="pesquisa">
+<script type="text/javascript">
+             function fetch() {
+                var purl;
+                purl = location.href;
+                document.mysearchform.ll.value = purl;
+                document.mysearchform.submit();
+            }
+</script>
+<noscript>
+<p>Sem Javascript n&atilde;o &eacute; possivel efectuar pesquisas correctamente.</p>
+</noscript>
+    <form id="form1" name="mysearchform" method="post" action="/portal/page?_pageid=418,1464885&_dad=portal&_schema=PORTAL" onSubmit="fetch();">
+      <label for="search">search
+        <input type="text" name="ms" id="search" value="search"  onFocus="pesquisaEffect(this);" onBlur="pesquisaEffect(this, 0);"
+               class="inputbox" accesskey="p" maxlength="30"/>
+      </label>
+      <input type="hidden" name="pg" value=""/>
+      <input type="hidden" name="search_type" value="Simple"/>
+      <input type="hidden" name="ll" value=""/>
+      <input type="hidden" name="p_action" value="SUBMIT"/>
+      <input type="hidden" name="_dad" value="portal"/>
+      <input type="hidden" name="_schema" value="PORTAL"/>
+      <input name="teste" type="submit" onclick="javascript:fetch();" alt="Initiate Search" title="Initiate Search" border="0" style="color:black; a:hover:white; text-decoration: none;" value="»"/>
+    </form>
+    <div id="voltarhomepage">
+           <p> <a href="url/page/PORTAL_UNIV_LISBOA" tabindex="12" title="UL Main Page">  UL Main Page</a></p>
+       </div>
+  </div>
+ <div id="middlebar">
+    <ul>
+      <li id="inicio"><a href="/pls/portal/url/page/MUSEUS" tabindex="12" title="Home">HOME</a></li>
+      <li id="universidade"><a href="url/page/MUSEUS/Menu_Central/faculdade" tabindex="13" title="Visit us">VISIT US</a></li>
+      <li id="estudantes"><a href="url/page/MUSEUS/Menu_Central/estudantes" tabindex="14" title="Activities">ACTIVITIES</a></li>
+      <li id="cursos"><a href="url/page/MUSEUS/Menu_Central/cursos" tabindex="15" title="Exhibitions">EXHIBITIONS</a></li>
+      <li id="secvirtual"><a href="url/page/MUSEUS/Menu_Central/investigacao" tabindex="16" title="Formação">FORMAÇÃO</a></li>
+      <li id="intranet"><a href="url/page/MUSEUS/Menu_Central/intranet" tabindex="17" title="Contacts">CONTACTS</a></li>
+    </ul>
+  </div>
+  <div id="calendar">
+    <h2>Events Schedule</h2>
+    <ul>
+      <li class="data">16.06.2013</li>
+      <li><a class="hora" target="blank" href="http://www.oal.ul.pt/hora.php" tabindex="17">Legal Time</a> <img src="http://www.mnhnc.ul.pt/images/netpa/ul/img/linkexterno.gif" title="This link will open in a new window" class="borderzero"/></li>
+    </ul>
+  </div>
+</div>
+</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" >
+<TR>
+<TD VALIGN="top"  width="180">
+<TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif"  HEIGHT="5"><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><TABLE  BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0" class="RegionNoBorder">
+<TR>
+<TD class="RegionHeaderColor" WIDTH="100%"><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><div id="left">
+  <h2 class="hide">Menu Principal</h2>
+  <div id="p7TMnav">
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN" tabindex="18" id="MENU_1391269"><h2 class="menuheader">Museum</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/AA_MISSAO" tabindex="19">Mission</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/ORGAOS" tabindex="20">Órgãos</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/ESTATUTOS" tabindex="21">Estatutos</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/HISTORIA" tabindex="22">History</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/PATRIMONIO" tabindex="23">Heritage</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/PUBLICACOES" tabindex="24">Publications</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/PARCERIAS" tabindex="25">Partnerships</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/VOLUNTÁRIOS E ESTAGIÁRIOS" tabindex="26">Volunteers and Interns</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/MUSEU_MEDIA" tabindex="27">The museum in the media</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MNHN/CEDÊNCIA DE ESPAÇOS" tabindex="28">Facilities hire</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1" tabindex="29" id="MENU_1391272"><h2 class="menuheader">Colections</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/COL_BOTANICA" tabindex="30">Botânica</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/COL_GEOLOGIA" tabindex="31">Mineralogia e geologia</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/COL_ZOOLOGIA" tabindex="32">Zoologia e Antropologia</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/C_COL" tabindex="33">Conselho de colecções</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/POLITICA" tabindex="34">Política|Procedimentos|Formulários</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/B_TESTE1/RELATORIOS_COL" tabindex="35">Relatórios e Planos de Actividade</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO" tabindex="36" id="MENU_1391629"><h2 class="menuheader">Research</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/AREAS_DE_INVESTIAGACAO" tabindex="37">Research areas</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/INVETIGADORES" tabindex="38">Researchers</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/LABORATORIOS" tabindex="39">Laboratories</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/PROJECTOS" tabindex="40">Projects</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/PUBLICACOES" tabindex="41">Publicações</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/C_INVESTIGACAO/RELATORIOS" tabindex="42">Relatórios e planos de actividade</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/PROMOCAO" tabindex="43" id="MENU_1391929"><h2 class="menuheader">Divulgação da Ciência</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/PROMOCAO/PROJECTOSDEDIVULGACAO" tabindex="44">Projectos de divulgação de ciência</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/PROMOCAO/PROJECTOSDEINVESTIGACAO" tabindex="45">Projectos de Investigação Científica</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/REVISTA DE IMPRENSA" tabindex="46"<h2 class="menuheader">Revista de imprensa</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/GALERIA DE IMAGENS" tabindex="47"<h2 class="menuheader">Galeria de imagens</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MUSEU PORTA FORA!" tabindex="48" id="MENU_1718318"><h2 class="menuheader">Museu porta fora!</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MUSEU PORTA FORA!/INSECTOS EM ORDEM" tabindex="49">Insectos em ordem | Bragança</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/MUSEU PORTA FORA!/PEGADINOS" tabindex="50">PegaDinos</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/PROGRAMAS ESPECIAIS" tabindex="51" id="MENU_1744912"><h2 class="menuheader">Programas especiais</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/PROGRAMAS ESPECIAIS/MATEMÁTICA 2013" tabindex="52">Matemática do Planeta Terra 2013</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/AGENDA" tabindex="53"<h2 class="menuheader">Agenda</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/NOTÍCIAS" tabindex="54" id="MENU_1744916"><h2 class="menuheader">Notícias</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/NOTÍCIAS/ABRIL 2013" tabindex="55">Abril 2013</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_ESQUERDO/NOTÍCIAS/MAIO 2013" tabindex="56">Maio 2013</a><!--/div--></div>
+</div>
+<span style="background-color:#FFFFFF;display: block; line-height: 5px;">&nbsp;</span>
+  </div>
+  <div id="box">
+    <p id="linkacessibilidade"> <a href="url/page/MUSEUS/acessibilidade" tabindex="75" title="Accessability web access symbol">Accessibility</a></p>
+    <p id="linksimbolos1">
+         <a href="url/page/portal_univ_lisboa/W3C_CSS" tabindex="78">
+            <img style="border: none;" id="img_w3c" src="http://www.mnhnc.ul.pt/images/netpa/ul/img/w3ccss.gif"   title="W3C CSS Validation Service Este link vai abrir numa nova janela"/></a>
+        <a href="url/page/portal_univ_lisboa/UNIAO_EUROPEIA">
+        	<img style="border: none;" id="img_eu" src="http://www.mnhnc.ul.pt/images/netpa/ul/img/uniao_europeia.gif"   title="União Europeia Este link vai abrir numa nova janela"/></a> 
+        </p>
+<p id="linksimbolos2"><a href="url/page/portal_univ_lisboa/POS_CONHECIMENTO">
+       
+        	<img style="border: none;" src="http://www.mnhnc.ul.pt/images/netpa/ul/img/pos_conhecimento.gif"   title="Pós-Conhecimento Este link vai abrir numa nova janela"/></a>  
+        </p>
+    <p id="areatecnica"><a href="url/page/MUSEUS/ficha_tecnica" tabindex="79" title="Technical info">Technical info</a> | <a href="url/page/MUSEUS/termos_uso" tabindex="79" title="Terms of Use">Terms of Use</a></p>
+    <p id="areacopyright"><strong>©</strong> Lisbon University 2010</p>
+  </div>
+</div>
+</TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE></TD>
+    
+    
+    
+<TD VALIGN="top"  width="674">
+    
+    <!--AK_CONTENT-->
+    <!-------------------------------------------------------- start search-->
+    <section id="search">
+        <div >
+            <div>
+                <form class="form-wrapper cf" action="listing.html" method="get">
+                    <div>
+                        <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." required>
+                            <button type="submit">Search</button>
+                            </div>
+                    <!--<input type="submit" value="submit" />-->
+                </form>
+                
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------------- end start search-->
+    
+    <div>
+        <div class="highlighted_div">
+            <span class="index_headers">Highlighted Pathway from other museums</span>
+            <img src="images/slide1.jpeg" /><p>Some text from my head. You know like lorem ipsum and staff like that</p>
+        </div>
+        <div class="featured_div"><span class="index_headers">Highlighted Pathway from other museums a</span>
+            <img src="images/slide1.jpeg" /><p>Some text from my head. You know like lorem ipsum and staff like that</p></div>
+    </div>
+    
+    
+    
+    <!--End AK_CONTENT-->
+    
+</TD>
+    
+    
+    
+    
+<TD VALIGN="top"  width="170">
+<TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><TABLE  BORDER="0" WIDTH="100%" CELLPADDING="0" CELLSPACING="0" class="RegionNoBorder">
+<TR>
+<TD class="RegionHeaderColor" WIDTH="100%"><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/js/calendar-en.js"></script>
+<noscript>
+<p>Sem Javascript n&atilde;o &eacute; possivel visualizar o calend&aacute;rio de eventos.</p>
+</noscript>
+<div id="right">
+  <div id="calendar-container">
+    <script type="text/javascript">
+      function dateChanged(calendar) {
+        // Beware that this function is called even if the end-user only
+        // changed the month/year.  In order to determine if a date was
+        // clicked you can use the dateClicked property of the calendar:
+        if (calendar.dateClicked) {
+          // OK, a date was clicked, redirect to /yyyy/mm/dd/index.php
+          var y = calendar.date.getFullYear();
+          var m = calendar.date.getMonth()+1;   // integer, 0..11
+          var d = calendar.date.getDate();      // integer, 1..31
+          // redirect...
+          window.location = "/pls/portal/url/page/MUSEUS/eventos/eventos_dia?dia=" + y + "-" + m + "-" + d;
+        }
+      };
+      Calendar.setup(
+      {
+        flat         : "calendar-container", // ID of the parent element
+        flatCallback : dateChanged           // our callback function
+      }
+      );
+    </script>
+<noscript>
+<p>Sem Javascript n&atilde;o &eacute; possivel visualizar o calend&aacute;rio de eventos.</p>
+</noscript>
+    <p id="url_categoria"><a href="url/page/MUSEUS/eventos/eventos_categoria">Events by Category</a></p>
+  </div>
+  <h2 class="hide">Menu UL</h2>
+  <div id="p7TMnavright">
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JARDIMBOTANICO" tabindex="80" id="MENU_1391161"><h2 class="menuheaderight">Botanical Garden</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JARDIMBOTANICO/HISTORIA_JB" tabindex="81">História</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JARDIMBOTANICO/PLANTAS" tabindex="82">Plantas com história</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JARDIMBOTANICO/PLANTAS DA ESTAÇÃO" tabindex="83">Plantas da Estação</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JARDIMBOTANICO/PRAGA_PALMEIRAS" tabindex="84">Praga das Palmeiras nos jardins de Lisboa</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/LABORATORIO_CHIMICO" tabindex="85"<h2 class="menuheaderight">Amphiteatro e Laboratorio Chimico</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO" tabindex="86" id="MENU_1391103"><h2 class="menuheaderight">Borboletário</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/ARACNARIO" tabindex="87">Aracnário</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/BORBOLETAS" tabindex="88">As borboletas</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/BORBOLETAS_ONLINE" tabindex="89">Borboletas online</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/BORBOLETAS_PLANTAS" tabindex="90">As borboletas e as plantas</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/DA_LAGARTA_BORBOLETA" tabindex="91">Da lagarta à borboleta</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BORBOLETARIO/VISITAS_BORBOLETAS" tabindex="92">Visite-nos!</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/PLANETARIO" tabindex="93"<h2 class="menuheaderight">Planetário</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/OBSERVATORIO" tabindex="94"<h2 class="menuheaderight">Observatório Astronómico</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/OAL" tabindex="95"<h2 class="menuheaderight">Observatório Astronómico de Lisboa</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/SALA_DO_VEADO" tabindex="96" id="MENU_1391260"><h2 class="menuheaderight">Sala do Veado | Espaço de Arte Contemporânea</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/SALA_DO_VEADO/EXPOSICOES" tabindex="97">Exposições</a><!--/div--></div>
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/PICADEIRO" tabindex="98"<h2 class="menuheaderight">Antigo Picadeiro do Colégio dos Nobres</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/BIBLIOTECAARQUIVO" tabindex="99"<h2 class="menuheaderight">Biblioteca e Arquivo</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/LOJA_MUSEU" tabindex="100"<h2 class="menuheaderight">Loja do Museu</h2></a><!--/div-->
+</div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU" tabindex="101" id="MENU_1486128"><h2 class="menuheaderight">Já aconteceu...</h2></a><!--/div-->
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/LANÇAMENTO RED LIST" tabindex="102">Lançamento da European Red List of Vascular Plants</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/ESTATUTOS" tabindex="103">Criada a unidade "Museus da Universidade de Lisboa"</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/NOMEACAO" tabindex="104">Nomeação do Presidente e membros do Conselho Directivo da Unidade Museus da UL</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/O JARDIM REGRESSA À CIDADE" tabindex="105">O Jardim regressa à Cidade</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/PROTOCOLO" tabindex="106">Protocolo entre MNHNC e Museu Nacional Ferroviário</a><!--/div--></div>
+<div><!--div class="ord"--><a href="url/page/MUSEUS/MENU_DIREITO/JAACONTECEU/UNIVERSEUM" tabindex="107">Reitor da Universidade de Lisboa é membro honorário da UNIVERSEUM</a><!--/div--></div>
+</div>
+  </div>
+</TD></TR>
+</TABLE><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ><TR ALIGN="LEFT">
+<TD vAlign="top" width="100%"><font class="inplacedisplayid2siteid0">
+<div id="redes_sociais">
+
+<a href="http://www.facebook.com/pages/Museu-Nacional-de-Hist%C3%B3ria-Natural-e-da-Ci%C3%AAncia/142173402547084?sk=wall&filter=12" target="_blank" title="MNHN is on Facebook"><img src="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/redes_sociais/facebook.jpg" alt="Facebook"></a>
+
+ 
+<a href="http://www.addthis.com/bookmark.php?v=250" class="addthis_button_compact"><img border="0" src="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/redes_sociais/add_more.gif" alt="+"></a>
+					
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub="></script></div></font>
+</TD></TR>
+</TABLE><TABLE  BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" background="http://www.mnhnc.ul.pt/images/pobtrans.gif" ></TABLE></TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE></TD>
+</TR>
+</TABLE>
+<!----- show footer template = 2923453359 ----->
+
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3665769-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+<!-- Page Metadata Generated On: 16-JUN-2013:12:41:12  Invalidated On:   Invalidated By User:   Time Taken: 50 msecs -->
