@@ -107,11 +107,16 @@ function getItemJSONP(itemID)
                 
                 //-//language
                 if(record.Languages!=undefined){
+                if (typeof record.Languages === 'object'){
                 var tempLangs = Object.keys(record.Languages);
                 for(var i=0; i <tempLangs.length; i++)
                 {
                 if(record.Languages[tempLangs[i]]!=undefined){
                 jQuery('#language').append('<span class=\"flag '+record.Languages[tempLangs[i]]+'flag\">'+record.Languages[tempLangs[i]]+'</span>');                }
+                }
+                }
+                else{
+                jQuery('#language').append('<span class=\"flag '+record.Languages+'flag\">'+record.Languages+'</span>');
                 }
                 }
                 
