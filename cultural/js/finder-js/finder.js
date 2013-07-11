@@ -96,6 +96,7 @@ langName['eng']='English';
 langName['eng; eng']='English';
 langName['fr']= 'French';
 langName['fre']= 'French';
+langName['fra']= 'French';
 langName['el']= 'Greek';
 langName['hun']= 'Hungarian';
 langName['et']= 'Estonian';
@@ -112,6 +113,7 @@ langName['sv']= 'Swedish';
 langName['ell']= 'Greek';
 langName ['lat'] = 'Latin';
 langName['rus'] = 'Russian';
+langName['spa'] = 'Spanish';
 
 
 google.load("language", "1");
@@ -1125,10 +1127,13 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                            {
                                                            
                                                            
+                                                           var language = data.val;
+                                                           if(langName[data.val]!=undefined){
+                                                           language=langName[data.val];
+                                                           }
                                                            
                                                            
-                                                           
-                                                           a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
+                                                           a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(language), span({cls:'total'}, data.count ));
                                                            
                                                            //              li({id: data.field + ':' + data.val},
                                                            //         a({href:'javascript:void(0);', title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field}),},
