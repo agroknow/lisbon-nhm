@@ -194,38 +194,42 @@
 .slider-navigation{
     display: block;
     width:100%;
-    margin-bottom:30px;
     padding-left:5px;
     text-decoration:none;
-    font: 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    font: bold 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
     
-}
-.slider-navigation a{
-    text-decoration:none;
 }
 
 .slider-prev{
     float:left;
     padding-right:10px;
     text-decoration:none;
+    color:black;
 }
 
 .slider-next{
     float:left;
     padding-left:10px;
     text-decoration:none;
+    color:black;
 }
 
 .pager{
     float:left;
+    padding:0px;
+    padding-top:5px;
+}
+.pager a{
+    float:left;
+    text-indent:-9999px;
+	background:url(images/pager_sprite_lisbon.png) 3px 3px no-repeat;
+	height:13px;
+	width:13px;
+	display:inline-block;
 }
 
-.activeSlide{
-    color:black !important;
-    font-size: 16px;
-    font-weight: bold;
-    margin:0px 3px 0px 3px;
-    text-decoration:none;
+.pager a.activeSlide, .pager a:hover {
+	background-position:3px -20px;
     
 }
 

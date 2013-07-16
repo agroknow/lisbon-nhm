@@ -194,38 +194,42 @@
 .slider-navigation{
     display: block;
     width:100%;
-    margin-bottom:30px;
     padding-left:5px;
     text-decoration:none;
-    font: 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    font: bold 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
     
-}
-.slider-navigation a{
-    text-decoration:none;
 }
 
 .slider-prev{
     float:left;
     padding-right:10px;
     text-decoration:none;
+    color:black;
 }
 
 .slider-next{
     float:left;
     padding-left:10px;
     text-decoration:none;
+    color:black;
 }
 
 .pager{
     float:left;
+    padding:0px;
+    padding-top:5px;
+}
+.pager a{
+    float:left;
+    text-indent:-9999px;
+	background:url(images/pager_sprite_lisbon.png) 3px 3px no-repeat;
+	height:13px;
+	width:13px;
+	display:inline-block;
 }
 
-.activeSlide{
-    color:black !important;
-    font-size: 16px;
-    font-weight: bold;
-    margin:0px 3px 0px 3px;
-    text-decoration:none;
+.pager a.activeSlide, .pager a:hover {
+	background-position:3px -20px;
     
 }
 
@@ -502,6 +506,11 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     width: 200px;
 }
 
+.leftSidebarInfo ul{
+    list-style:none;
+    padding-left:10px;
+}
+
 .leftSidebarInfo h2{
     color:black;
     font-weight: lighter;
@@ -528,8 +537,15 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 .itemDescription
 {
     float:left;
-    width:550px;
+    width:420px;
     /*min-height: 200px;*/
+    margin-top:0px;
+}
+
+.itemDescription ul
+{
+    list-style:none;
+    padding-left:10px;
 }
 
 .itemKeywords
@@ -566,12 +582,30 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     text-decoration:underline;
 }
 
+#item_title{
+    text-decoration:none;
+    font-size:14px;
+}
 
 .itemview {
     float: right;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     width: 430px;
 }
+
+.grayscale_back{
+    background-color:lightgray;
+}
+
+.titlesOnLeft{
+     font-size:13px;
+    font-weight:bold;
+}
+
+.item_label{
+    font-size:14px;
+}
+
 .item-main {
 	margin:0;
     padding-left:10px;
@@ -706,7 +740,7 @@ a.grflag {
 	background-repeat:no-repeat;
 	display:inline-block;
 	font-size:12px;
-    float:right;
+    float:left;
 }
 
 .access{

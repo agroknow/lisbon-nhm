@@ -26,9 +26,6 @@ function getItemJSONP(itemID)
                 
                 //-//collection
                 if(record.collectionId!=undefined){
-                if (record.collectionId.indexOf('HNHM ') != -1){
-                record.collectionId = record.collectionId.split('HNHM ')[1];
-                }
                 document.getElementById('collection').innerHTML = record.collectionId;}
                 
                 //-//classification
@@ -47,31 +44,17 @@ function getItemJSONP(itemID)
                 
                 //-//Scientific Name
                 if(record.scientificName!=undefined){
-                var tempScienName = Object.keys(record.scientificName);
-                for(var i=0; i <tempScienName.length; i++)
-                {
-                if(record.classification[tempClassif[i]]!=undefined){
-                jQuery('#scientific_name').append(record.scientificName[tempScienName[i]].value);
-                if(i!=tempScienName.length-1){ jQuery('#scientific_name').append(", "); }
-                }
-                }
-                
+                jQuery('#scientific_name').append(record.scientificName);
                 }
                 
                 //-//Spatial Coverage
                 if(record.spatial!=undefined){
-                var tempSpatial = Object.keys(record.spatial);
-                for(var i=0; i <tempSpatial.length; i++)
-                {
-                var tempInSpatial =  Object.keys(record.spatial[i]);
-                for(var j=0; j<tempInSpatial.length;j++){
-                if(record.spatial[tempSpatial[i]][tempInSpatial[j]]!=undefined){
-                jQuery('#spatial_coverage').append(record.spatial[tempSpatial[i]][tempInSpatial[j]]);
-                if(j!=tempInSpatial.length-1){ jQuery('#spatial_coverage').append(", "); }
+                for(var i=0; i <record.spatial.length; i++){
+                if(record.spatial[i].value!=undefined){
+                jQuery('#spatial_coverage').append(record.spatial[i].value);
+                if(i!=record.spatial.length-1){ jQuery('#spatial_coverage').append(", "); }
                 }
-                
-                }
-                
+                                
                 }
                 
                 }
@@ -80,14 +63,7 @@ function getItemJSONP(itemID)
                 
                 if(record.created!=undefined)
                 {
-                jQuery('#date_created').append(record.created);
-                
-                //                var testDate = Object.keys(record.created)
-                //                for(var i=0;i<testDate.length;i++){
-                //                jQuery('#date_created').append(record.created[testDate[i]]);
-                //                if(i!=testDate.length-1){ jQuery('#date_created').append(", "); }
-                //                }
-                
+                jQuery('#date_created').append(record.created[0].value);
                 }
                 
                 
@@ -231,7 +207,7 @@ function getItemJSONP(itemID)
                 }
                 ////
                 //-//Relation
-                document.getElementById('item_relation').innerHTML = record.relation ;
+                document.getElementById('item_relation').innerHTML = "<a href=\""+record.relation+"\" target=\"_blank\">" + record.relation + "</a>";
                 
                 
                 ///----Access to the resource
