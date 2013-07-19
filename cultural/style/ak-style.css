@@ -243,7 +243,7 @@
     margin-left: 10px;
     margin-right: 5px;
     margin-top: 15px;
-    width: 430px;
+    width: 560px;
 }
 .odd {
 	background:#eeeeee;
@@ -537,7 +537,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 .itemDescription
 {
     float:left;
-    width:420px;
+    width:550px;
     /*min-height: 200px;*/
     margin-top:0px;
 }
@@ -590,7 +590,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 .itemview {
     float: right;
     /*margin-top: 15px;*/
-    width: 430px;
+    width: 560px;
 }
 
 .grayscale_back{
