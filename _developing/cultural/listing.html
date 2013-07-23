@@ -25,7 +25,7 @@
         <SCRIPT type="text/javascript" src="js/finder-js/jsonp.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="js/finder-js/sha1.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="js/finder-js/jaml-all.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/finder-lisbon.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="js/finder-js/finder.js"></SCRIPT>
         <!---------------------------------- end listing related-->
         
         
@@ -462,7 +462,7 @@ function show_task_help() {
     <script type="text/javascript">
         
         var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-42040521-4']);
+        _gaq.push(['_setAccount', 'UA-42040521-10']);
         _gaq.push(['_trackPageview']);
         
         (function() {
@@ -473,7 +473,6 @@ function show_task_help() {
         
         </script>
     
-    
     <script type="text/javascript">
         /*
          * function customizeFinder() is called at initialisation time
@@ -481,23 +480,21 @@ function show_task_help() {
          * and also the same values inside the -finder.js- !
          */
         $.noConflict();
-        
         function customizeFinder() {
             return {
-                /* limit collections|providers*/
-   				"selectedProviders":["EDUMNHN"],
-                    "selectedLanguage":"en",
-                    "externalSources": ["wp","scr","ss","gb"],
-                    "pageContainers": ['bottom','top'],
-                    "facets": ["language","lrt", "context", "iur"], //,"rights" ,"format" "tagr"
-                    "maxLengthDescription":  300,
-                    "pageSize": 6,
-                    "repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    "serviceUrl":"http://83.212.96.169:8080/glnRepo/api/ariadne/restp"
-                    
-                    //"repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    //"serviceUrl":"http://83.212.96.169:8080/OE_repos/api/ariadne/restp"
-                    
+                "selectedProviders":["National Museum of Natural History - University of Lisbon"],
+                "selectedLanguage":"en",
+                "externalSources": ["wp","scr","ss","gb"],
+                "pageContainers": ['bottom','top'],
+                "facets" : ["collection","language","format","classification"], //"rights", "provider" removed
+                "maxLengthDescription":  300,
+                "pageSize": 6,
+                "repositoryName": "NE_Repo",
+                "serviceUrl":"http://83.212.101.124:8080/NE_Repository_Exp/api/ariadne/restp"
+                
+            
+                
+                
             }
         }
         </script>

@@ -96,7 +96,6 @@ langName['eng']='English';
 langName['eng; eng']='English';
 langName['fr']= 'French';
 langName['fre']= 'French';
-langName['fra']= 'French';
 langName['el']= 'Greek';
 langName['hun']= 'Hungarian';
 langName['et']= 'Estonian';
@@ -113,7 +112,6 @@ langName['sv']= 'Swedish';
 langName['ell']= 'Greek';
 langName ['lat'] = 'Latin';
 langName['rus'] = 'Russian';
-langName['spa'] = 'Spanish';
 
 
 google.load("language", "1");
@@ -431,10 +429,10 @@ function parseQueryString(initUpdate){
         // add the below to code @ github. It is to limit the results only for OE collection //
         
     }
-    //previous one
-    //    {
-    //        clauses.push({language:'VSQL',expression:plainText});
-    //    }
+//previous one
+//    {
+//        clauses.push({language:'VSQL',expression:plainText});
+//    }
     
     
     
@@ -549,7 +547,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                   oddCtr++;
                                                                   item.isOdd = oddCtr;
                                                                   
-                                                                  //alert(JSON.stringify(item));
+                                                                // alert(JSON.stringify(item));
                                                                   
                                                                   if(item.format[0]!=undefined){
                                                                   if (item.format[0].indexOf('pdf') != -1)
@@ -580,11 +578,11 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                   }
                                                                   
                                                                   
-                                                                  
-                                                                  for(i=0,tmpSize=item.description.length;i<tmpSize;i++)
+                                                                 
+                                                                  for(i=0,tmpSize=item.descriptions.length;i<tmpSize;i++)
                                                                   {
-                                                                  if(item.description[i].lang==SELECTED_LANGUAGE)
-                                                                  item.thisDescription=item.description[i];
+                                                                    if(item.descriptions[i].lang==SELECTED_LANGUAGE)
+                                                                    item.thisDescription=item.descriptions[i];
                                                                   }
                                                                   
                                                                   if(item.thisDescription==undefined){item.thisDescription = " There is no defined description for this language";}
@@ -603,7 +601,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                   
                                                                   if(item.keywords == undefined || item.keywords == '')
                                                                   {
-                                                                  $('search_results').insert(Jaml.render('resultwithoutkeywords',item));
+                                                                    $('search_results').insert(Jaml.render('resultwithoutkeywords',item));
                                                                   }
                                                                   else
                                                                   {
@@ -628,14 +626,14 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                   else
                                                                   item.description =item.description.substring(0,length);
                                                                   
-                                                                  item.isOdd = oddCtr;
+                                                                   item.isOdd = oddCtr;
                                                                   
                                                                   $('search_results').insert(Jaml.render('result',item));
                                                                   // alert("metaid:" +item.metaMetadataId);
                                                                   iter++;
                                                                   }
-                                                                  
-                                                                  
+
+   
                                                                   });
                                              
                                              $('search_results_index').show();
@@ -650,15 +648,15 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                              pagination_hide();
                                              }
                                              
-                                             /* for facet presentation
-                                              result.facets.each(function(item,index){
-                                              
-                                              //     item.title = item.title.substring(0,length);
-                                              
-                                              $('search_results').insert(Jaml.render('result2',item));
-                                              
-                                              });
-                                              */
+    /* for facet presentation
+     result.facets.each(function(item,index){
+     
+     //     item.title = item.title.substring(0,length);
+     
+     $('search_results').insert(Jaml.render('result2',item));
+     
+     });
+     */
                                              
                                              }
                                              
@@ -707,7 +705,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                                                           if (CHECK==0)
                                                                                                           element.insert(Jaml.render('rbcriteria2',it2));
                                                                                                           
-                                                                                                          }
+                                                                                                          } 
                                                                                                           }
                                                                                                           });
                                                                                   }
@@ -775,19 +773,19 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                              
                                              
                                              
-                                             /*var names = $('language_rbo').select('ul.rbList');
-                                              
-                                              names.each(function(item){
-                                              
-                                              //var pos = item.id.indexOf(':');
-                                              var facet = item.id;
-                                              //.substring(0,pos);
-                                              //var langValue = item.id.substring(pos+1);
-                                              alert(facet);
-                                              if (langName[langValue]== langName[name])
-                                              alert("EVRHKA");
-                                              
-                                              });*/
+    /*var names = $('language_rbo').select('ul.rbList');
+     
+     names.each(function(item){
+     
+     //var pos = item.id.indexOf(':');
+     var facet = item.id;
+     //.substring(0,pos);
+     //var langValue = item.id.substring(pos+1);
+     alert(facet);
+     if (langName[langValue]== langName[name])
+     alert("EVRHKA");
+     
+     });*/
                                              
                                              
                                              
@@ -797,35 +795,35 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                              
                                              
                                              
-                                             //                                             function loadTranslator() {
-                                             //
-                                             //                                             var script = new Element('script',{'type':'text/javascript','src':'http://translate.google.com/translate_a/element.js?cb=googleSectionalElementInit&ug=section&hl=auto'});
-                                             //
-                                             //                                             $('script-translator').childElements().each(function(el){el.remove();});
-                                             //                                             $('script-translator').appendChild(script);
-                                             //
-                                             //                                             if(google.translate) {
-                                             //                                             new google.translate.SectionalElement({
-                                             //                                                                                   sectionalNodeClassName: 'lodescription',
-                                             //                                                                                   controlNodeClassName: 'control',
-                                             //                                                                                   background: '#ffffcc'
-                                             //                                                                                   }, 'google_sectional_element');
-                                             //                                             }
-                                             //
-                                             //                                             $$('.lodescription').each(function(data){
-                                             //                                                                       var toTranslate = data.innerHTML.stripScripts().unescapeHTML().replace(/[\n\r\s]+/g, ' ').replace('Translate','');
-                                             //                                                                       google.language.detect(toTranslate,function(result){
-                                             //                                                                                              if (!result.error) {
-                                             //                                                                                              if(result.language == 'en') {
-                                             //                                                                                              data.descendants()[0].hide();
-                                             //                                                                                              }
-                                             //
-                                             //                                                                                              }
-                                             //                                                                                              });
-                                             //                                                                       });
-                                             //
-                                             //
-                                             //                                             }
+//                                             function loadTranslator() {
+//                                             
+//                                             var script = new Element('script',{'type':'text/javascript','src':'http://translate.google.com/translate_a/element.js?cb=googleSectionalElementInit&ug=section&hl=auto'});
+//                                             
+//                                             $('script-translator').childElements().each(function(el){el.remove();});
+//                                             $('script-translator').appendChild(script);
+//                                             
+//                                             if(google.translate) {
+//                                             new google.translate.SectionalElement({
+//                                                                                   sectionalNodeClassName: 'lodescription',
+//                                                                                   controlNodeClassName: 'control',
+//                                                                                   background: '#ffffcc'
+//                                                                                   }, 'google_sectional_element');
+//                                             }
+//                                             
+//                                             $$('.lodescription').each(function(data){
+//                                                                       var toTranslate = data.innerHTML.stripScripts().unescapeHTML().replace(/[\n\r\s]+/g, ' ').replace('Translate','');
+//                                                                       google.language.detect(toTranslate,function(result){
+//                                                                                              if (!result.error) {
+//                                                                                              if(result.language == 'en') {
+//                                                                                              data.descendants()[0].hide();
+//                                                                                              }
+//                                                                                              
+//                                                                                              }
+//                                                                                              });
+//                                                                       });
+//                                             
+//                                             
+//                                             }
                                              
                                              
                                              
@@ -870,95 +868,95 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                            a({href:'javascript:void(0);', onclick: "searchByKeyword('#{key}')".interpolate({key: data})}, data);
                                                            });
                                              
-                                             /*
-                                              Jaml.render('first_title',function(data){
-                                              a({href:data.location,title: data.title, target: '_blank'},data.title)
-                                              }); */
+    /*
+     Jaml.render('first_title',function(data){
+     a({href:data.location,title: data.title, target: '_blank'},data.title)
+     }); */
                                              
-                                             //                                             Jaml.register('result', function(data){
-                                             //                                                           div({cls:'row'},
-                                             //
-                                             //                                                               div({cls:'lotitle'},
-                                             //                                                                   a({href:data.location,title: data.title, target: '_blank'},data.title)
-                                             //                                                                   // Jaml.render('first_title',data.title)
-                                             //                                                                   ),br(),
-                                             //
-                                             //                                                               div({cls:'thumb'},
-                                             //
-                                             //                                                                   Jaml.render('thumb_pres',data)
-                                             //                                                                   ,br(),
-                                             //                                                                   div({cls:'lodescription'},
-                                             //                                                                       div({cls:'control'}),
-                                             //                                                                       removeHtmlTags(addEndingDescription(data.description))),br()
-                                             //                                                                   ),
-                                             //
-                                             //                                                               span({cls:'keywords'},
-                                             //                                                                    span({cls:'bold'},'Keywords: '),
-                                             //                                                                    Jaml.render('keyword',data.keywords)
-                                             //                                                                    )
-                                             //
-                                             //
-                                             //
-                                             //                                                               /*  div({cls:'moremeta'}, p(),span({cls:'heading'},'more info'),
-                                             //                                                                div({cls:'metacontent'},
-                                             //                                                                'Location: ', a({href:data.location,title: data.location, target: '_blank'},data.location), br(),
-                                             //                                                                //  'Context: ', data.context,
-                                             //                                                                br(),
-                                             //                                                                span({cls:'keywords'},
-                                             //                                                                span({cls:'bold'},'Keywords: '),
-                                             //                                                                Jaml.render('keyword',data.keywords)
-                                             //                                                                ), br()
-                                             //                                                                ,a({href:"http://83.212.96.219:8080/cultural/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
-                                             //
-                                             //                                                                )
-                                             //                                                                )*/
-                                             //                                                               );
-                                             //                                                           });
+//                                             Jaml.register('result', function(data){
+//                                                           div({cls:'row'},
+//                                                               
+//                                                               div({cls:'lotitle'},
+//                                                                   a({href:data.location,title: data.title, target: '_blank'},data.title)
+//                                                                   // Jaml.render('first_title',data.title)
+//                                                                   ),br(),
+//                                                               
+//                                                               div({cls:'thumb'},
+//                                                                   
+//                                                                   Jaml.render('thumb_pres',data)
+//                                                                   ,br(),
+//                                                                   div({cls:'lodescription'},
+//                                                                       div({cls:'control'}),
+//                                                                       removeHtmlTags(addEndingDescription(data.description))),br()
+//                                                                   ),
+//                                                               
+//                                                               span({cls:'keywords'},
+//                                                                    span({cls:'bold'},'Keywords: '),
+//                                                                    Jaml.render('keyword',data.keywords)
+//                                                                    )
+//                                                               
+//                                                               
+//                                                               
+//                                                               /*  div({cls:'moremeta'}, p(),span({cls:'heading'},'more info'),
+//                                                                div({cls:'metacontent'},
+//                                                                'Location: ', a({href:data.location,title: data.location, target: '_blank'},data.location), br(),
+//                                                                //  'Context: ', data.context,
+//                                                                br(),
+//                                                                span({cls:'keywords'},
+//                                                                span({cls:'bold'},'Keywords: '),
+//                                                                Jaml.render('keyword',data.keywords)
+//                                                                ), br()
+//                                                                ,a({href:"http://83.212.96.219:8080/cultural/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
+//                                                                
+//                                                                )
+//                                                                )*/
+//                                                               );           
+//                                                           });
+
                                              
                                              
-                                             
-                                             //                                             Jaml.register('resultwithoutkeywords', function(data) {
-                                             //                                                           /* div({cls:'row'},
-                                             //                                                            div({cls:'lotitle'},
-                                             //                                                            a({href:data.location,title: data.title, target: '_blank'},data.title)),
-                                             //                                                            div({cls:'snip'},
-                                             //                                                            div({cls:'lodescription'},
-                                             //                                                            div({cls:'control'}),
-                                             //                                                            removeHtmlTags(addEndingDescription(data.description)))
-                                             //                                                            )
-                                             //                                                            );*/
-                                             //
-                                             //                                                           div({cls:'row'},
-                                             //
-                                             //                                                               div({cls:'lotitle'},
-                                             //                                                                   a({href:data.location,title: data.title, target: '_blank'},data.title)
-                                             //                                                                   // Jaml.render('first_title',data.title)
-                                             //                                                                   ),br(),
-                                             //
-                                             //                                                               div({cls:'thumb'},
-                                             //
-                                             //                                                                   Jaml.render('thumb_pres',data)
-                                             //                                                                   ,br(),
-                                             //                                                                   div({cls:'lodescription'},
-                                             //                                                                       div({cls:'control'}),
-                                             //                                                                       removeHtmlTags(addEndingDescription(data.description))),br()
-                                             //                                                                   ),
-                                             //
-                                             //
-                                             //                                                               div({cls:'moremeta'}, p(),span({cls:'heading'},'more info'),
-                                             //                                                                   div({cls:'metacontent'},
-                                             //                                                                       'Location: ', a({href:data.location,title: data.location, target: '_blank'},data.location), br(),
-                                             //                                                                       //  'Context: ', data.context,
-                                             //                                                                       br()
-                                             //
-                                             //                                                                       ,a({href:"http://83.212.96.219:8080/cultural_repos/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
-                                             //
-                                             //                                                                       )
-                                             //                                                                   )
-                                             //                                                               );
-                                             //
-                                             //
-                                             //                                                           });
+//                                             Jaml.register('resultwithoutkeywords', function(data) {
+//                                                           /* div({cls:'row'},
+//                                                            div({cls:'lotitle'},
+//                                                            a({href:data.location,title: data.title, target: '_blank'},data.title)),
+//                                                            div({cls:'snip'},
+//                                                            div({cls:'lodescription'},
+//                                                            div({cls:'control'}),
+//                                                            removeHtmlTags(addEndingDescription(data.description)))		
+//                                                            )
+//                                                            );*/
+//                                                           
+//                                                           div({cls:'row'},
+//                                                               
+//                                                               div({cls:'lotitle'},
+//                                                                   a({href:data.location,title: data.title, target: '_blank'},data.title)
+//                                                                   // Jaml.render('first_title',data.title)
+//                                                                   ),br(),
+//                                                               
+//                                                               div({cls:'thumb'},
+//                                                                   
+//                                                                   Jaml.render('thumb_pres',data)
+//                                                                   ,br(),
+//                                                                   div({cls:'lodescription'},
+//                                                                       div({cls:'control'}),
+//                                                                       removeHtmlTags(addEndingDescription(data.description))),br()
+//                                                                   ),
+//                                                               
+//                                                               
+//                                                               div({cls:'moremeta'}, p(),span({cls:'heading'},'more info'),
+//                                                                   div({cls:'metacontent'},
+//                                                                       'Location: ', a({href:data.location,title: data.location, target: '_blank'},data.location), br(),
+//                                                                       //  'Context: ', data.context,
+//                                                                       br()
+//                                                                       
+//                                                                       ,a({href:"http://83.212.96.219:8080/cultural_repos/services/oai?verb=GetRecord&metadataPrefix=oai_lom&identifier="+data.metaMetadataId, title: "View all meta", target: '_blank'},"View all meta"), br()
+//                                                                       
+//                                                                       )
+//                                                                   )
+//                                                               );
+//                                                           
+//                                                           
+//                                                           });
                                              
                                              /*-----------------------------RENDER RESULT LISTING ITEMS--------------------------------*/
                                              
@@ -989,33 +987,15 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                            }//end for
                                                            }//end if
                                                            
-                                                           //title
-                                                           var thisTitle = "undefined";
-                                                           if(data.title!=undefined)
-                                                           {
-                                                           thisTitle=data.title[0].value;
-                                                           for(var i=0 , length=data.title.length; i<length;i++)
-                                                           {
-                                                           if(data.title[i].lang=='en'){
-                                                           thisTitle = data.title[i].value
-                                                           }//end lang check
                                                            
-                                                           }//end for
-                                                           }//end if
+                                                           /*---------------------SECOND CHANGE*/
+                                                           //var imgThumb = data.format;
+//                                                           if(data.contentType[0].toUpperCase() == 'IMAGE')
+//                                                           {
+//                                                           imgThumb = data.objectUri;
+//                                                           }
                                                            
-                                                           //description
-                                                           var thisDescription = "undefined";
-                                                           if(data.description!=undefined)
-                                                           {
-                                                           thisDescription=data.description[0].value;
-                                                           for(var i=0 , length=data.description.length; i<length;i++)
-                                                           {
-                                                           if(data.description[i].lang=='en'){
-                                                           thisDescription = data.description[i].value
-                                                           }//end lang check
                                                            
-                                                           }//end for
-                                                           }//end if
                                                            
                                                            var thisRights = data.licenseUri;
                                                            if(data.licenseUri==undefined){thisRights == "undefined";}
@@ -1034,7 +1014,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                                                         div({cls:'language'}, span("Creative commons licence:"), thisRights),
                                                                                         div({cls:'language'}, span("Rights:"), thisRights2),
                                                                                         div({cls:'floatright'},
-                                                                                            div({cls:'line alignright'}, a({href:"item.html?id="+data.identifier, cls:'moreinfo'}, "More Info")))))))
+                                                                                            div({cls:'line alignright'}, a({href:"item.html?id="+data.id, cls:'moreinfo'}, "More Info")))))))
                                                            });
                                              
                                              
@@ -1069,88 +1049,68 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                            }//end for
                                                            }//end if
                                                            
+                                                         
+                                                          var imgThumb = data.format;
+                                                          // if(data.contentType[0].toUpperCase() == 'IMAGE')
+                                                          // {
+                                                          // imgThumb = data.thumbnailUri[0];
+                                                          // }
                                                            
-                                                           var imgThumb = data.format;
-                                                           if(data.contentType[0].toUpperCase() == 'IMAGE')
-                                                           {
-                                                           imgThumb = data.objectUri[0];
-                                                           }
+//                                                           var thisRights = data.licenseUri;
+//                                                           if(data.licenseUri==undefined){thisRights == "undefined";}
+//                                                           
+//                                                           var thisRights2 = data.rights;
+//                                                           if(data.rights==undefined){thisRights2 == "undefined";}
+
                                                            
-                                                           //title
-                                                           var thisTitle = "undefined";
-                                                           if(data.title!=undefined)
-                                                           {
-                                                           thisTitle=data.title[0].value;
-                                                           for(var i=0 , length=data.title.length; i<length;i++)
-                                                           {
-                                                           if(data.title[i].lang=='en'){
-                                                           thisTitle = data.title[i].value
-                                                           }//end lang check
-                                                           
-                                                           }//end for
-                                                           }//end if
-                                                           
-                                                           //description
-                                                           var thisDescription = "undefined";
-                                                           if(data.description!=undefined)
-                                                           {
-                                                           thisDescription=data.description[0].value;
-                                                           for(var i=0 , length=data.description.length; i<length;i++)
-                                                           {
-                                                           if(data.description[i].lang=='en'){
-                                                           thisDescription = data.description[i].value
-                                                           }//end lang check
-                                                           
-                                                           }//end for
-                                                           }//end if
-                                                           
+
                                                            article({class:'item-intro ' +odd },
                                                                    header(
                                                                           h2(img({src:imgThumb}),
-                                                                             a({href:data.objectUri[0], title: thisTitle, target: '_blank'},thisTitle)),
-                                                                          section(p({cls:'item-intro-desc'}, thisDescription),
+                                                                             a({href:data.location[0], title: data.title[0].value, target: '_blank'},data.title[0].value)),
+                                                                          section(p({cls:'item-intro-desc'}, data.descriptions[0].value),
                                                                                   aside({cls:'clearfix'},
+//                                                                                        div({cls:'language'}, span("Creative commons licence:"), thisRights),
+//                                                                                        div({cls:'language'}, span("Rights:"), thisRights2),
                                                                                         div({cls:'floatright'},
-                                                                                            div({cls:'line alignright'}, a({href:"item.html?id="+data.id[0], cls:'moreinfo'}, "More Info")))))))});
+                                                                                            div({cls:'line alignright'}, a({href:"item.html?id="+data.identifier, cls:'moreinfo'}, "More Info")))))))});
                                              
                                              
                                              
                                              /*---------------------------------------------------------------------------------------------*/
                                              
                                              
-                                             /* Jaml.register('rbcriteria', function(data)
-                                              {
-                                              
-                                              
-                                              li({id: data.field + ':' + data.val},
-                                              a({href:'javascript:void(0);',title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})},
-                                              data.val),'(#{count})'.interpolate({count: data.count})
-                                              );
-                                              });
-                                              
-                                              
-                                              Jaml.register('rbcriteria2', function(data)
-                                              {
-                                              li({id: data.field + ':' + data.val},
-                                              a({href:'javascript:void(0);',title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})},
-                                              langName[data.val]),
-                                              '(#{count})'.interpolate({count: data.count})
-                                              );
-                                              });*/
+                                            /* Jaml.register('rbcriteria', function(data)
+                                                           {
+                                                           
+                                                           
+                                                           li({id: data.field + ':' + data.val},
+                                                              a({href:'javascript:void(0);',title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})},
+                                                                data.val),'(#{count})'.interpolate({count: data.count})
+                                                              ); 
+                                                           });
+                                             
+                                             
+                                             Jaml.register('rbcriteria2', function(data)
+                                                           {
+                                                           li({id: data.field + ':' + data.val},
+                                                              a({href:'javascript:void(0);',title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})},
+                                                                langName[data.val]),
+                                                              '(#{count})'.interpolate({count: data.count})
+                                                              );
+                                                           });*/
                                              
                                              /*---------------------------------------------------------------------------------------------*/
                                              /*-----------------------------RENDER FACETS--------------------------------*/
                                              
                                              
                                              
-                                             Jaml.register('rbcriteria', function(data) //rest facets
+                                             Jaml.register('rbcriteria', function(data) //rest facets 
                                                            {
                                                            
                                                            
                                                            //###
                                                            //alert(data.val);
-                                                           
-                                                           //removing HNHM from facets
                                                            var label = data.val;
                                                            
                                                            a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick:"toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field})}, span(label), span({cls:'total'}, data.count));
@@ -1163,13 +1123,10 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                            {
                                                            
                                                            
-                                                           var language = data.val;
-                                                           if(langName[data.val]!=undefined){
-                                                           language=langName[data.val];
-                                                           }
                                                            
                                                            
-                                                           a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(language), span({cls:'total'}, data.count ));
+                                        
+                                                           a({href:'#', id: data.field + ':' + data.val, title: data.val, onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val, parent: data.field})}, span(langName[data.val]), span({cls:'total'}, data.count ));
                                                            
                                                            //              li({id: data.field + ':' + data.val},
                                                            //         a({href:'javascript:void(0);', title: data.val,onclick: "toggleFacetValue('#{id}','#{parent}')".interpolate({id: data.field + ':' + data.val,parent: data.field}),},

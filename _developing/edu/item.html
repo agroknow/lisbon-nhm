@@ -12,26 +12,19 @@
 <link rel="alternate stylesheet" type="text/css" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/style_medium.css" title="A+">
 <link rel="alternate stylesheet" type="text/css" href="http://www.mnhnc.ul.pt/images/netpa/ul/ul_template/museus_template/css/style_large.css" title="A++">
 
+    <!--more (AK)-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style/ak-style.css" />
+    <script type="text/javascript" src="js/ariadne-json.js"></script>
+    <script src="js/jquery.js"></script>
     
-    <!---------------------------------- start listing related-->
-    <link rel="stylesheet" href="style/reset.css" />
-    <link href="http://fonts.googleapis.com/css?family=Signika" rel='stylesheet' type='text/css'>
-        
-        <script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.1/build/yahoo-dom-event/yahoo-dom-event.js&2.8.1/build/container/container_core-min.js&2.8.1/build/datasource/datasource-min.js&2.8.1/build/element/element-min.js&2.8.1/build/paginator/paginator-min.js&2.8.1/build/datatable/datatable-min.js&2.8.1/build/json/json-min.js&2.8.1/build/selector/selector-min.js&2.8.1/build/layout/layout-min.js"></script>
-        
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <SCRIPT type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/prototype.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/jsonp.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/sha1.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/jaml-all.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="js/finder-js/finder-lisbon.js"></SCRIPT>
-        <!---------------------------------- end listing related-->
-        
-        
-        <!--more css-->
-        <link rel="stylesheet" type="text/css" media="screen" href="style/ak-style.css" />
-
+    <script type="text/javascript">
+        function getItem()
+        {
+            getItemJSONP('http://83.212.96.169:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+        }
+        </script>
+    <!--more (AK)-->
+    
 
 
 <script type="text/javascript" src="http://www.mnhnc.ul.pt/images/netpa/ul/campus/js/styleswitcher.js" ></script>
@@ -175,13 +168,18 @@ function jspw3(d,m,f){ //v1.4
 //-->
 </script>
 <script type="text/javascript" language="JavaScript" src="http://www.mnhnc.ul.pt/images/netpa/ul/vwd_scripts/jspw3x.js"></script>
+    
+    
+    
+    
+    
 </head>
-<body onload="preloadImages();MM_preloadImages('img/belas_artes/belas_artes_on.gif','img/escola/escola_on.gif');P7_TMopen()" >
+<body   onload="getItem();preloadImages();MM_preloadImages('img/belas_artes/belas_artes_on.gif','img/escola/escola_on.gif');P7_TMopen()" >
 
   <a name="topopagina" id="topopagina"></a>
   <div class="invisivel"><a href="#destaque" class="invisivel">destaque</a></div>
   <div id="wrap">
-    <div>
+    <div id="content">
       
 <SCRIPT TYPE="text/javascript">
 <!-- Comment out script for old browsers
@@ -396,55 +394,130 @@ function show_task_help() {
 <TD VALIGN="top"  width="674">
     
     <!--AK_CONTENT-->
-    <section id="main">
-        <section id="search">
+
+    <div id="maincontent" class="with-sidebar">
+        <!-------------------------------------------------------- start search-->
+        <section id="main">
+            <!-- <div class="sorting"><a href="index.html">Home Page</a> > Results</div> -->
+            <section id="search">
+                
+                <div >
+                    <div>
+                        <form class="form-wrapper cf" action="listing.html" method="get">
+                            <div>
+                                <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." required>
+                                    <button type="submit">Search</button>
+                                    </div>
+                            <!--<input type="submit" value="submit" />-->
+                        </form>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-------------------------------------------------------- end start search-->
+            </div><!--end maincontent-->
+    
+    <!-- item content -->
+    
+    <div class="sorting"></div> <!-- horizontial bar-->
+    
+    <div class="twocols clearfix">
+        
+        <aside class="leftSidebarInfo">
+            <div class="clearfix">
+                
+                <ul class="floatleft cleanList">
+                    <h2>More Info</h2>
+                    
+                    <li class="cleanRow">
+                        <span>Language:</span>
+                        <nav class="inline-nav" id="itemLanguage">
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Educational Context:</span>
+                        <nav class="inline-nav" id="itemEducationalContext">
+                            
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Resource Type:</span>
+                        <nav class="inline-nav" id="itemResourceType">
+                            
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Intended Audience:</span>
+                        <nav class="inline-nav" id="itemIntendedAudience">
+                            
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Typical Age Range:</span>
+                        <nav class="inline-nav" id="itemAgeRange">
+                            
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Collection:</span>
+                        <nav class="inline-nav" id="itemCollection">
+                            
+                        </nav>
+                    </li>
+                    <li class="cleanRow">
+                        <span>Media Format:</span>
+                        <nav class="inline-nav" id="itemMediaFormat">
+                            
+                        </nav>
+                    </li>
+                    
+                </ul>
+            </div>
             
-            <div >
-                <div>
-                    <form class="form-wrapper cf" method="post" onsubmit="doSearch(); return false;">
+        </aside>
+        
+        
+        
+        <section class="itemview">
+            <!--<a href="javascript:window.history.back();" class="backbutton secondary">Back</a>-->
+            <article class="item-main">
+                <header>
+                    <h1 id="itemTitle"></h1>
+                    <!--<img src="style/images/copyright_sample.png" alt="image" />-->
+                </header>
+                <div class="item-content">
+                    <div>
+                        <p class="itemDescription" id="itemDescription"></p>
+                        
+                    </div>
+                    <div id="itemThumb"></div>
+                    
+                    <div class="clearfix">
                         <div>
-                            <input type="text" name="query" id="query" class="withplaceholder" placeholder="Search..." required>
-                                <button type="submit">Search</button>
-                                </div>
-                        <!--<input type="submit" value="submit" />-->
-                    </form>
+                            <ul class="itemKeywords">
+                                <li>
+                                    <span>Keywords:</span>
+                                    <nav id="itemKeywords" class="inline-nav clearfix"> <!--auto-generated--></nav>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="position: relative; top: 7px;">
+                            <ul>
+                                <li id="itemRights">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="floatright"><a href="mailto:info@agroknow.gr?Subject=Green%20Learning%20Network" class="reportaproblem  secondary">Report a problem</a></div>
+                        <div class="floatright" style="margin-right: 15px;" id="itemAccess"></div>
+                    </div>
                     
                 </div>
-            </div>
+            </article>
         </section>
-        
-        <div class="inner">
-            
-            <div class="twocols clearfix">
-                <!--filters-->
-                <aside class="filter">
-                    <div id="insert_summary" ></div><!-- Results : (1 - 12 of 216) from Ajax.JSONRequest() -->
-                    <div id="search_status" ></div>
-                    
-                    <!--<div><input type="text" name="search_filter" class="search_filter" placeholder="Search results"/></div>-->
-                    <div id="insert_facets" ></div>
-                    <div class="remove_filters" style="padding: 3px 0 3px 0;">
-                        <a href="" style="font-size:12px;" onclick="initialSearch();pagination_hide();">remove filters</a>
-                    </div>
-                </aside>
-                <!--end filters-->
-                
-                
-                
-                <section class="listing">
-                    <div id="insert_pagination_top" class="aligncenter"></div>
-                    
-                    <div id="insert_results"></div> <!--results from AJAX call-->
-                    
-                    <div id="insert_pagination_bottom" class="aligncenter"></div>
-                </section>
-                
-            </div>
-        </div>
-        
-      
-      </section>
-
+    </div>
+    
+    <!-- end item content-->
     
     <!--End AK_CONTENT-->
     
@@ -472,36 +545,6 @@ function show_task_help() {
          })();
         
         </script>
-    
-    
-    <script type="text/javascript">
-        /*
-         * function customizeFinder() is called at initialisation time
-         * you need to change values repositoryName and serviceUrl
-         * and also the same values inside the -finder.js- !
-         */
-        $.noConflict();
-        
-        function customizeFinder() {
-            return {
-                /* limit collections|providers*/
-   				"selectedProviders":["EDUMNHN"],
-                    "selectedLanguage":"en",
-                    "externalSources": ["wp","scr","ss","gb"],
-                    "pageContainers": ['bottom','top'],
-                    "facets": ["language","lrt", "context", "iur"], //,"rights" ,"format" "tagr"
-                    "maxLengthDescription":  300,
-                    "pageSize": 6,
-                    "repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    "serviceUrl":"http://83.212.96.169:8080/glnRepo/api/ariadne/restp"
-                    
-                    //"repositoryName": "Organic.Edunet",//find this in the ariadne.properties file inside your Ariadne folder  ex."repositoryName":"AriadneNext Repository"
-                    //"serviceUrl":"http://83.212.96.169:8080/OE_repos/api/ariadne/restp"
-                    
-            }
-        }
-        </script>
-
 
 </body>
 </html>
