@@ -8,15 +8,11 @@ function getItemJSONP(urlTemp)
                 dataType: "jsonp",
                 success: function(data)
                 {
-                
-                //alert(data);
-                
+            
                 //parse array and create an JS Object Array
                 //every item is a JSON
                 var arrayWithJSONS = JSON.parse(data);
-                
-                //alert("my_1 : " + arrayWithJSONS[0].languageBlocks.en.title);
-                
+                console.log(arrayWithJSONS);
 //-------------
                 if(arrayWithJSONS[0].languageBlocks.length!==undefined && arrayWithJSONS[0].languageBlocks!==undefined )
                 {
@@ -122,9 +118,7 @@ function getItemJSONP(urlTemp)
                 jQuery('#itemRights').append('<span>Rights: </span><nav  class="itemRights">'+arrayWithJSONS[0].rights.description['en']+'</nav>');
                 }
                 }
-                if(arrayWithJSONS[0].set!==undefined){
-                jQuery('#itemCollection').append('<span class="forKomma last">'+arrayWithJSONS[0].set+'</span>');
-                }
+                
                 if(arrayWithJSONS[0].expressions[0].language!==undefined)
                 {
                 jQuery('#itemLanguage').append('<span class="flag '+arrayWithJSONS[0].expressions[0].language+'flag">'+arrayWithJSONS[0].expressions[0].language+'</span>');
@@ -306,9 +300,7 @@ function getItemJSONP(urlTemp)
                 jQuery('#itemRights').append('<span>Rights: </span><nav  class="itemRights">'+arrayWithJSONS[0].rights.description['en']+'</nav>');
                 }
                 }
-                if(arrayWithJSONS[0].set!==undefined){
-                jQuery('#itemCollection').append('<span class="forKomma last">'+arrayWithJSONS[0].set+'</span>');
-                }
+                
                 if(arrayWithJSONS[0].expressions[0].language!==undefined)
                 {
                 jQuery('#itemLanguage').append('<span class="flag '+arrayWithJSONS[0].expressions[0].language+'flag">'+arrayWithJSONS[0].expressions[0].language+'</span>');
