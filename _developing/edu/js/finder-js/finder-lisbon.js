@@ -549,7 +549,8 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
 		                      
 		                    console.log(item);
 		                      
-		                      if(item.format[0]!=undefined){
+		                      if(item.format!=undefined && item.format[0]!=undefined)
+		                      {
 		                      if (item.format[0].indexOf('pdf') != -1)
 		                      item.format='images/icons/pdf.png';
 		                      else if (item.format[0].indexOf('powerpoint') != -1)
@@ -571,10 +572,13 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
 		                      else if ((item.format[0].indexOf('word')!= -1) || (item.format[0].indexOf('wordprocessingml')!= -1))
 		                      item.format='images/icons/word.png';
 		                      else if ((item.format[0].indexOf('application')!= -1))
-		                      item.format='images/icons/application.png';
+		                      	item.format='images/icons/application.png';
 		                      else
-		                      item.format='images/icons/application.png';
-		                      
+		                      	item.format='images/icons/application.png';
+		                      }
+		                      else
+		                      {
+			                     item.format='images/icons/application.png'; 
 		                      }
 		                      
 		                      
@@ -848,8 +852,10 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                               aside({cls:'clearfix'},
                                                     div({cls:'floatleft'},
                                                         div({cls:'line keywords'}, span("Keywords:"), keywordsToEmbed)),
-                                                    div({cls:'language'}, span("Creative commons licence:"), thisRights),
-                                                    div({cls:'language'}, span("Rights:"), thisRights2),
+/*
+                                              div({cls:'language'}, span("Creative commons licence:"), thisRights),
+                                              div({cls:'language'}, span("Rights:"), thisRights2),
+*/
                                                     div({cls:'floatright'},
                                                         div({cls:'line alignright'}, a({href:"item.html?id="+id, cls:'moreinfo'}, "More Info")))))))
                        });
