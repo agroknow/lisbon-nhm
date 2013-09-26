@@ -658,45 +658,43 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                  if(needsUpdate){
                  updatePaginator(result.nrOfResults);
                  result.facets.each(function(item,index){
-                                    var fld = item.field;
-                                    //rbkey = facetKeys[fld];
-                                    var facetHasNoLimit = true;
-                                    var limitValues = [];
-                                    if (LIMIT_FACET_DISPLAY[fld]) {
-                                    limitValues = LIMIT_FACET_DISPLAY[fld];
-                                    facetHasNoLimit = false;
-                                    }
-                                    var rbkey = fld;
-                                    var element = $(rbkey + '_rbo');
-                                    if(element && facetExpressions.get(fld) == undefined){
-                                    element.update('');
-                                    if(item.numbers != undefined){
-                                    item.numbers.each(function(it2,idx2){
-                                                      if (facetHasNoLimit || limitValues.indexOf(it2.val) >= 0) {
-                                                      
-                                                      
-                                                      it2.field = fld;
-                                                      
-                                                      it2.val=it2.val.replace(/\'/g, "&#34;");
-                                                                              it2.count = formatInteger(it2.count,THOUSAND_SEP);
-                                                                              //element.insert(Jaml.render('rbcriteria',it2));
-                                                                              if (fld!= "language")
-                                                                              element.insert(Jaml.render('rbcriteria',it2));
-                                                                              
-                                                                              else
-                                                                              // check first if langName[it2.val] exists already in rbList
-                                                                              {
-                                                                              checkLang(it2.val,it2.count);
-                                                                              
-                                                                              if (CHECK==0)
-                                                                              element.insert(Jaml.render('rbcriteria2',it2));
-                                                                              
-                                                                              }
-                                                                              }
-                                                                              });
-                                                      }
-                                                      }
-                                                      });
+                    var fld = item.field;
+                    //rbkey = facetKeys[fld];
+                    var facetHasNoLimit = true;
+                    var limitValues = [];
+                    if (LIMIT_FACET_DISPLAY[fld]) {
+                    limitValues = LIMIT_FACET_DISPLAY[fld];
+                    facetHasNoLimit = false;
+                    }
+                    var rbkey = fld;
+                    var element = $(rbkey + '_rbo');
+                    if(element && facetExpressions.get(fld) == undefined){
+                    element.update('');
+                    if(item.numbers != undefined){
+                    item.numbers.each(function(it2,idx2)
+                    {
+                          if (facetHasNoLimit || limitValues.indexOf(it2.val) >= 0) {
+                                                                it2.field = fld;
+                          it2.val=it2.val.replace(/\'/g, "&#34;");
+                          it2.count = formatInteger(it2.count,THOUSAND_SEP);
+                          //element.insert(Jaml.render('rbcriteria',it2));
+                          if (fld!= "language")
+                          element.insert(Jaml.render('rbcriteria',it2));
+                          
+                          else
+                          // check first if langName[it2.val] exists already in rbList
+                          {
+                          checkLang(it2.val,it2.count);
+                          
+                          if (CHECK==0)
+                          element.insert(Jaml.render('rbcriteria2',it2));
+                          
+                          }
+                          }
+                     });
+                                      }
+                                      }
+                                      });
                                     
                                     
                                     facetSlide();
@@ -999,18 +997,19 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                  function facetSlide(){
                  
                  jQuery(document).ready(function(){
-                                        
-                                        jQuery('.filter_parent').each(function() {
-                                                                      if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
-                                                                      });
-                                        jQuery('.filter_parent').click(function(event){
-                                                                       event.preventDefault();
-                                                                       jQuery(this).toggleClass("opened");
-                                                                       jQuery(this).next().slideToggle("slow");
-                                                                       });
-                                        exit();
-                                        
-                                        });
+                        jQuery('.filter_parent').each(function() 
+                        {
+	                          if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
+	                    });
+	                    
+                        jQuery('.filter_parent').click(function(event){
+	                       event.preventDefault();
+	                       jQuery(this).toggleClass("opened");
+	                       jQuery(this).next().slideToggle("slow");
+                        });
+                        exit();
+                        
+                        });
                  }
                  
                  
