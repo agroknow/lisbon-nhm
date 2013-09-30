@@ -549,7 +549,8 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
 		                      
 		                    console.log(item);
 		                      
-		                      if(item.format!=undefined && item.format[0]!=undefined){
+		                      if(item.format!=undefined && item.format[0]!=undefined)
+		                      {
 		                      if (item.format[0].indexOf('pdf') != -1)
 		                      item.format='images/icons/pdf.png';
 		                      else if (item.format[0].indexOf('powerpoint') != -1)
@@ -577,7 +578,7 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
 		                      }
 		                      else
 		                      {
-			                    item.format='images/icons/application.png';
+			                     item.format='images/icons/application.png'; 
 		                      }
 		                      
 		                      
@@ -852,8 +853,8 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
                                                     div({cls:'floatleft'},
                                                         div({cls:'line keywords'}, span("Keywords:"), keywordsToEmbed)),
 /*
-                                   div({cls:'language'}, span("Creative commons licence:"), thisRights),
-                                   div({cls:'language'}, span("Rights:"), thisRights2),
+                                              div({cls:'language'}, span("Creative commons licence:"), thisRights),
+                                              div({cls:'language'}, span("Rights:"), thisRights2),
 */
                                                     div({cls:'floatright'},
                                                         div({cls:'line alignright'}, a({href:"item.html?id="+id, cls:'moreinfo'}, "More Info")))))))

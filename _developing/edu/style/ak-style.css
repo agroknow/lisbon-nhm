@@ -494,8 +494,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 }
 
 
-/**
- ================================================================ITEM VIEW============================================
+/**==================ITEM VIEW============================================
  */
 /*Left Sidebar in item*/
 .leftSidebarInfo {
@@ -528,6 +527,11 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     /*float:right;*/
     width:160px;
     height:160px;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
 }
 .itemDescription
 {
@@ -570,6 +574,21 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     text-decoration:underline;
 }
 
+#approved
+{
+	padding:10px 0px;
+	display: inline-block;
+}
+#approved img
+{
+	width:70px;
+	float:left;	
+}
+#approved p
+{
+	padding-top: 20px;
+	float:left;	
+}
 
 .itemview {
     float: right;
@@ -626,6 +645,10 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 }
 .item-content .iteminfo li {
 	margin-bottom:8px;
+}
+
+.item-content ul{
+	list-style: none;
 }
 nav.inline-nav {
 	display:inline;

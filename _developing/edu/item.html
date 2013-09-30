@@ -20,7 +20,8 @@
     <script type="text/javascript">
         function getItem()
         {
-            getItemJSONP('http://83.212.96.219:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+        getItemJSONP('http://83.212.96.219:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]);
+        /* getItemJSONP('http://54.228.180.124:8080/akifRetriever/getAKIF?ids='+location.search.split("=")[1]); */
         }
         </script>
     <!--more (AK)-->
@@ -501,7 +502,14 @@ function show_task_help() {
                                 <li id="itemRights">
                                 </li>
                             </ul>
+                            <div id="approved" style="position: relative; top: 7px; visibility:hidden; ">
+	                        <img src="images/approved.png"/>
+	                        <p id="validator"></p>
+	                    </div>
                         </div>
+                        
+	                    
+	                    
                         <div class="floatright"><a href="mailto:info@agroknow.gr?Subject=Green%20Learning%20Network" class="reportaproblem  secondary">Report a problem</a></div>
                         <div class="floatright" style="margin-right: 15px;" id="itemAccess"></div>
                     </div>
