@@ -958,17 +958,18 @@ function findMaterials(start,numberResults,needsUpdate,initUpdate){
          
          jQuery(document).ready(function(){
                                 
-                                jQuery('.filter_parent').each(function() {
-                                                              if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
-                                                              });
-                                jQuery('.filter_parent').click(function(event){
-                                                               event.preventDefault();
-                                                               jQuery(this).toggleClass("opened");
-                                                               jQuery(this).next().slideToggle("slow");
-                                                               });
-                                exit();
-                                
-                                });
+        jQuery('.filter_parent').each(function() 
+        {
+                  if(jQuery(this).hasClass("opened")) jQuery(this).next().css("display","block");
+         });
+        jQuery('.filter_parent').click(function(event){
+	       event.preventDefault();
+	       jQuery(this).toggleClass("opened");
+	       jQuery(this).next().slideToggle("slow");
+	               exit();
+	       });
+
+        });
          }
          
          
