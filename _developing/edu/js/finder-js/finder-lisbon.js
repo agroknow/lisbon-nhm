@@ -112,6 +112,9 @@ langName['sv']= 'Swedish';
 langName['ell']= 'Greek';
 langName ['lat'] = 'Latin';
 langName['rus'] = 'Russian';
+langName['da'] = 'Danish';
+langName['cs'] = 'Czech';
+langName['hu'] = 'Hungarian';
 
 
 google.load("language", "1");
