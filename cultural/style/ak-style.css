@@ -1,6 +1,28 @@
-/**
+/** GENERAL
  Green: #5a933f
  */
+ 
+.link_to_general_finder
+{
+	border-bottom:2px solid black;
+	text-align:center;
+	width:65%;
+	margin:30px auto;
+	font-size: 1.2em;
+}
+
+.link_to_general_finder a
+{
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.link_to_general_finder a:hover
+{
+	color:black;
+}
+ 
+ 
 /**
  ===========================================SEARCH BOX ======================================
  */
