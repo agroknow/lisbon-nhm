@@ -1,7 +1,7 @@
 /** GENERAL
  Green: #5a933f
  */
- 
+
 .link_to_general_finder
 {
 	text-align:center;
@@ -28,7 +28,34 @@
 	border-radius: 5px;
 }
 
- 
+/**
+ ===========================================Breadcrumb ======================================
+ */
+
+#breadcrumb{
+	width:90%;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding: 3px;
+	margin-left:10px;
+	font-size: 1.1em;
+	float:left;
+}
+
+#breadcrumb a{
+	color: #5a933f;
+	text-decoration: none;
+}
+
+#breadcrumb a:hover{
+	text-decoration: underline;
+}
+
+.active{
+	font-weight: bold;
+}
+
+
 /**
  ===========================================SEARCH BOX ======================================
  */
@@ -117,7 +144,7 @@
     border-color: transparent black transparent;
     top: 12px;
     left: -6px;
-    
+
 }
 
 
@@ -225,7 +252,7 @@
     padding-left:5px;
     text-decoration:none;
     font: bold 15px/20px 'lucida sans', 'trebuchet MS', 'Tahoma';
-    
+
 }
 
 .slider-prev{
@@ -258,7 +285,7 @@
 
 .pager a.activeSlide, .pager a:hover {
 	background-position:3px -20px;
-    
+
 }
 
 /**
@@ -306,8 +333,8 @@
     max-width : 650px; /*fix infinite length of keywords line*/
 	margin-bottom:7px;
     overflow:hidden; /*### need change because it hides some keywords*/
-    
-    
+
+
 }
 
 
@@ -383,7 +410,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     padding-left:10px;
     color:black;
     text-decoration:none;
-    
+
 }
 .yui-pg-next
 {
@@ -405,7 +432,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 	border-radius:0 0 4px 4px;*/
     border-right: 1px solid lightgray;
     float:left;
-    
+
 }
 .filter a {
 	display:block;
@@ -421,15 +448,15 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
     text-transform:uppercase;
     background:#5a933f;
     color:black;
-    
-    
+
+
 }
 
 .filter_parent a {
     color:white;
     font-weight:lighter;
     font:20px;
-    
+
 }
 
 .filter_parent:hover {
@@ -501,7 +528,7 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 	background-color:white;
 	font-weight:normal;
 	text-align:center;
-    
+
 }
 .remove_filters {
 	text-align:right;
@@ -610,12 +637,12 @@ a.secondary:hover { color:#5a933f;text-decoration:underline; }
 #approved img
 {
 	width:70px;
-	float:left;	
+	float:left;
 }
 #approved p
 {
 	padding-top: 20px;
-	float:left;	
+	float:left;
 }
 
 .itemview {
