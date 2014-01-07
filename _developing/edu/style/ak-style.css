@@ -55,6 +55,17 @@
 	font-weight: bold;
 }
 
+/**
+ =========================================== FOOTER ======================================
+ */
+
+.footer{
+	border-top:solid 1px #5a933f;
+	width:850px;
+	margin: 20px auto 20px;
+	padding-top: 4px;
+	text-align: center;
+}
 
 /**
  ===========================================SEARCH BOX ======================================
